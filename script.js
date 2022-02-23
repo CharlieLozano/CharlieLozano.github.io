@@ -25,26 +25,33 @@ function delay(time) {
 
 
 function resizeImage(){
-    let lightboxImage = document.querySelector('.lightbox-img');
-     
-    let windowHeight = window.innerHeight;
-    let windowWidth = window.innerWidth;
-    let realHeight = Number(lightboxImage.naturalHeight);
-    let realWidth = Number(lightboxImage.naturalWidth);
     
-    console.log(lbImgHeight)
-    if(realHeight > windowHeight - 80){
-        lightboxImage.style.height = (windowHeight - 80) + 'px';
-        lightboxImage.style.width = 'auto'
+    
+    let lightboxImage = document.querySelector('.lightbox-img');
+    
+    if(lightboxImage != undefined){
+        let windowHeight = window.innerHeight;
+        let windowWidth = window.innerWidth;
+        let realHeight = Number(lightboxImage.naturalHeight);
+        let realWidth = Number(lightboxImage.naturalWidth);
 
-    }
-
-    let lbImgWidth = Number(getComputedStyle(lightboxImage).width.slice(0, -2));
-    if(realWidth > windowWidth - 80 ){
         console.log(lbImgHeight)
-        imagePlace.style.width = (windowWidth - 80) + 'px';
-        imagePlace.style.height = 'auto'     
+        if(realHeight > windowHeight - 80){
+            lightboxImage.style.height = (windowHeight - 80) + 'px';
+            lightboxImage.style.width = 'auto'
+
+        }
+
+        let lbImgWidth = Number(getComputedStyle(lightboxImage).width.slice(0, -2));
+        if(realWidth > windowWidth - 80 ){
+            console.log(lbImgHeight)
+            imagePlace.style.width = (windowWidth - 80) + 'px';
+            imagePlace.style.height = 'auto'     
+        }
+
     }
+    
+
 
 }
 
