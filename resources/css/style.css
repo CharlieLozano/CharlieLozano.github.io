@@ -237,7 +237,7 @@ header p{
 }
 
 #project-three{
-    background-image: url('../images/splash.png');
+    background-image: url('../images/splash.jpg');
     background-position: right;
     background-size: cover; 
 }
@@ -305,7 +305,7 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 870px){
     #project-one .vanish{
         background: rgb(10,37,78);
     }
