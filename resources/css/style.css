@@ -35,7 +35,7 @@ p{
 ///////////*/
 
 nav{
-    color: #fc6da7;
+    
     background-color: #910f41;
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +50,7 @@ nav h2{
     background-color: #40021b;
     padding: 4px 15px;
     border-radius: 10px;
+    color: #fc6da7;
 }
 
 nav ul{
@@ -69,6 +70,26 @@ nav a{
     
 }
 
+@media only screen and (min-width: 1400px){
+    nav{
+        width: 1400px;
+        margin: 0 auto;
+    } 
+    
+    .bg-max{
+        background-color:#910f41;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    nav h2{
+        font-size: 22px;
+    }
+}
+
+
+
 /*/////////////
 /// Header ///
 ///////////*/
@@ -85,17 +106,6 @@ header{
     
 }
 
-.header-bg{
-    background-image: url('../images/Lots%20of%20Poses%201.png');
-    background-position: center;
-    opacity: .3;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}
-
 header h1{
     font-size: 25px;
     position: relative;
@@ -109,6 +119,24 @@ header p{
     position: relative;
     color: black;
 
+}
+
+@media only screen and (min-width: 1400px){
+    header div{
+        max-width: 1300px;
+        margin: auto
+    }
+}
+
+@media only screen and (max-width: 600px){
+    header h1{
+        font-size: 20px;
+
+    }
+
+    header p{
+        font-size: 25px;
+    }
 }
 
 /*/////////////
@@ -141,6 +169,10 @@ header p{
     border: none;
 }
 
+#projects button:hover{
+    cursor: pointer;
+}
+
 .project{
     margin: 20px;
     border-radius: 20px;
@@ -148,7 +180,7 @@ header p{
     background-image: url('../images/image-1.png');
     background-position: right;
     position: relative;
-    z-index: -2;
+    z-index: 5;
         
 }
 
@@ -266,9 +298,61 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
     color: black;
 }
 
+@media only screen and (min-width: 1400px){
+    #projects .big-screen{
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #project-one .vanish{
+        background: rgb(10,37,78);
+    }
+
+    #project-two .vanish{
+    background: rgb(154,0,65);
+    }
+
+    #project-three .vanish{
+    background: rgb(41,150,134);
+    }
+
+    .width-50{
+        width: 100%;
+    }
+    
+    #project-two .content{
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .project{
+        height: auto;
+    }
+    
+    #projects h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+
+    #projects p{
+        font-size: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+
+    }
+    
+}
+
 /*/////////////
 //// Art /////
 ///////////*/
+
+.big-screen-2{
+    background-color: darkslategrey;
+}
 
 #art{
     display: grid;
@@ -276,6 +360,8 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
     padding: 50px;
     grid-gap: 1rem;
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     height: 100%;
     background-color: darkslategrey;
     grid-auto-flow: row dense;
@@ -284,52 +370,53 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
 #art div{
     width: auto;
     height: auto;
+    transition-duration: 0.4s;
 }
 
 #img-1{
-    background-image: url('../images/image-1.png');
+    background-image: url('../images/image-1.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-2{
-    background-image: url('../images/image-2.png');
+    background-image: url('../images/image-2.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-3{
-    background-image: url('../images/image-3.png');
+    background-image: url('../images/image-3.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-4{
-    background-image: url('../images/image-4.png');
+    background-image: url('../images/image-4.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-5{
-    background-image: url('../images/image-5.png');
+    background-image: url('../images/image-5.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-6{
-    background-image: url('../images/image-6.png');
+    background-image: url('../images/image-6.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-7{
-    background-image: url('../images/image-7.png');
+    background-image: url('../images/image-7.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #img-8{
-    background-image: url('../images/image-8.png');
+    background-image: url('../images/image-8.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -340,26 +427,29 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
     background-position: center;
 }
 
+
 .normal-grid{
     width: auto;
     height: auto;
     padding: 50%;
+    transition-duration: 0.4s;
 }
 
 .normal-grid:hover{
     transform: scale(1.08, 1.08);
 }
 
-
 .horizontal-grid{
     width: auto;
     height: auto;
     grid-column-end: span 2;
-    
+    padding-bottom: 50%;
 }
 
 .horizontal-grid:hover{
     transform: scale(1.04, 1.04);
+    transition-duration: 0.4s;
+    
 }
 
 .vertical-grid{
@@ -371,6 +461,7 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
 
 .vertical-grid:hover{
     transform: scale(1.04, 1.04);
+    transition-duration: 0.4s;
 }
 
 
@@ -379,23 +470,56 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
     height: auto;
     grid-row-end: span 2;
     grid-column-end: span 2;
+    padding: 50%;
 }
 
 .big-grid:hover{
     transform: scale(1.04, 1.04);
+    transition-duration: 0.4s;
+}
+
+@media only screen and (max-width: 800px){
+    #art{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .extra-art{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+    #art{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .extra-art{
+        display: inherit;
+    }
+    
+    
 }
 
 /*/////////////
-//// Art /////
+/// Skills ///
 ///////////*/
+
+.big-screen-3{
+    border-bottom: solid #e9dcf2 20px;
+    border-top: solid #e9dcf2 20px;
+
+}
 
 #skills{
     padding: 100px 50px 125px;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: solid #e9dcf2 20px;
-    border-top: solid #e9dcf2 20px;
+    max-width: 1400px;
+    margin: auto;
+    justify-content: center;
 }
+
 
 
 .skill{
@@ -404,6 +528,8 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    min-width: 180px;
+    
 }
 
 .skill h3{
@@ -433,41 +559,36 @@ background: linear-gradient(90deg, rgba(41,150,134,1) 0%, rgba(41,150,134,1) 40%
 .lvl div{
     position: absolute;
     height: 90%;
+    width: 97%;
     top: 1px;
     left: 2px;
     border: solid #ac52ff 3px;
-    background: rgb(172,82,255);
-    background: linear-gradient(90deg, rgba(172,82,255,1) 0%, rgba(227,48,135,1) 40%, rgba(255,41,22,1) 100%);
+    background-image: url('../images/bar.png');
     border-radius: 20px;
 }
 
 .lvl-1 div{
     width: 20%;
-    background: #ac52ff;
+
 }
 
 .lvl-2 div{
     width: 30%;
-    background: rgb(172,82,255);
-background: linear-gradient(90deg, rgba(172,82,255,1) 0%, rgba(227,48,184,1) 100%);
+
 }
 
 .lvl-3 div{
     width: 40%;
-    background: rgb(172,82,255);
-background: linear-gradient(90deg, rgba(172,82,255,1) 0%, rgba(210,37,145,1) 100%);
+
 }
 
 .lvl-4 div{
     width: 54%;
-    background: rgb(172,82,255);
-background: linear-gradient(90deg, rgba(172,82,255,1) 0%, rgba(210,37,145,1) 85%, rgba(210,27,80,1) 100%);
+
 }
 
 .lvl-5 div{
     width: 69%;
-background: rgb(172,82,255);
-background: linear-gradient(90deg, rgba(172,82,255,1) 0%, rgba(210,37,145,1) 61%, rgba(255,41,22,1) 100%);
 }
 
 .lvl-6 div{
@@ -476,4 +597,175 @@ background: linear-gradient(90deg, rgba(172,82,255,1) 0%, rgba(210,37,145,1) 61%
 
 .lvl-7 div{
     width: 97%;
+}
+
+@media only screen and (max-width: 800px){
+    
+    #skills{
+        padding: 50px 50px 75px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        margin: auto;
+        justify-content: center;
+    }
+    
+}
+
+/*//////////////
+/// Contact ///
+////////////*/
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 8%;
+    border-top: solid #e9dcf2 20px;
+}
+
+#contact-container{
+    text-align: center;
+}
+
+#contact-container div{
+    margin: 10px;
+    width: 320px;
+    padding: 20px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#contact img{
+    width: 30%;
+    height: auto;
+    padding-bottom: 20px;
+    
+}
+
+#contact p{
+    font-size: 22px;
+}
+
+#contact a{
+    text-decoration: none;
+    color: #fa1b5e;
+}
+
+/*///////////////////
+/// Menu Button ////
+/////////////////*/
+
+.menu div{
+    background-color: white;
+    width: 34px;
+    height: 5px;
+    border-radius: 6px;
+
+}
+
+nav .menu{
+    width: 34px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    align-content: space-between;
+}
+
+.disappear-bar{
+    animation-fill-mode: forwards;
+}
+
+@keyframes disappear {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media only screen and (max-width: 800px){
+    nav ul{
+        display: none;
+        width: 100%;
+        padding: 1rem 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }    
+    
+    nav li{
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+        
+    }
+    
+    nav .menu{
+        display: flex;
+    }
+}
+
+/*///////////////
+/// Lightbox ///
+/////////////*/
+
+.lightbox{
+    background-color: darkslategrey;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    display: none;
+    opacity: 0;
+    padding: 40px;
+    align-content: center;
+}
+
+.LB-menu{
+    display: flex;
+    justify-content: flex-end;
+    top: 30px;
+    right: 0px;
+    position: absolute;
+    z-index: 81;
+    
+}
+
+.LB-menu img{
+    width: 30px;
+    height: auto;
+}
+
+.img-placeholder{
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.lighbox .container{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.img-placeholder img{
+    object-fit: scale-down;
+    position: relative;
+    z-index: 80;
+}
+
+.close-LB-screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    right: 0;
 }

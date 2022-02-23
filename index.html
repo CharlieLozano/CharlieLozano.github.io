@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <title>Charlie Lozano</title>
     <link rel="stylesheet" href="resources/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <nav>
-        <h2><strong>Charlie Lozano</strong></h2>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#art">Art</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="notdefined">Contact</a></li>
-        </ul>
-    </nav>
+   <div class='bg-max'>
+        <nav>
+            <a href="index.html"><h2 ><strong>Charlie Lozano</strong></h2></a>
+            
+            <div class="menu">
+                <div class='disappear-bar'></div>
+                <div></div>
+                <div class='disappear-bar'></div>
+            </div>
+               
+            <ul id='submenu'>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     
     <header>
-        <!--<div class='header-bg'></div>-->
-        <h1>Hello! I'm Charlie.</h1>
-        <p>I'm an artist and aspiring <strong>Full Stack Developer</strong> and looking forward to do simple but <strong>Awesome</strong> online multiplayer games!</p>
-        <p></p>
+        <div>
+            <h1>Hello! I'm Charlie.</h1>
+            <p>I'm an artist and aspiring <strong>Full Stack Developer</strong> and looking forward to do simple but <strong>Awesome</strong> online multiplayer games!</p>
+        </div>
+        
+        
     </header>
     
     
     <section id="projects">
        
+        <div class="big-screen">
+            
         <div id='project-one' class="project">
             <div class="vanish"></div>
             
@@ -38,13 +52,12 @@
                             
                         </div>
                         
-                        <button><strong>Website</strong></button>
+                        <button onclick="window.location.href='https://charlielozano.github.io/tea-cozy';"><strong>Website</strong></button>
                     </div>
                </div>
 
             </div>
         </div>
-
        
         <div id='project-two' class="project">
             <div class="vanish"></div>
@@ -58,7 +71,7 @@
                             
                         </div>
                         
-                        <button><strong>Website</strong></button>
+                        <button onclick="window.location.href='https://charlielozano.github.io/space-pepperonni';"><strong>Website</strong></button>
                     </div>
                </div>
 
@@ -78,15 +91,17 @@
                             
                         </div>
                         
-                        <button><strong>Website</strong></button>
+                        <button onclick="window.location.href='https://charlielozano.github.io/dance-heights';"><strong>Website</strong></button>
                     </div>
                </div>
 
             </div>
         </div>
-        
+    
+        </div>        
     </section>
     
+    <div class="big-screen-2">
     <section id="art">
        <div id="img-1" class="horizontal-grid"></div>
        <div id="img-2" class="vertical-grid"></div>
@@ -96,10 +111,12 @@
        <div id="img-6" class="big-grid"></div>
        <div id="img-7" class="normal-grid"></div>
        <div id="img-8" class="vertical-grid"></div>
-       <div id="img-9" class="normal-grid"></div>
+       <div id="img-9" class="normal-grid extra-art"></div>
 
     </section>
+    </div>
     
+    <div class="big-screen-3">
     <section id="skills">
         <div class="skill">
             <h3>HTML</h3>
@@ -116,7 +133,7 @@
             </div>
         </div>
         <div class="skill">
-            <h3>Javascrip</h3>
+            <h3>Javascript</h3>
             <div class='lvl lvl-4'>
                 <span></span><span></span><span></span><span></span><span></span><span></span>
                 <div></div>
@@ -160,7 +177,7 @@
         </div>
 
            <div class="skill">
-            <h3>PostgresSQL</h3>
+            <h3>PostgresQL</h3>
             <div class='lvl lvl-1'>
                 <span></span><span></span><span></span><span></span><span></span><span></span>
                 <div></div>
@@ -177,9 +194,25 @@
 
    
     </section>
-    
-    <footer>
+    </div>
+
+    <div class='lightbox'>
+        <div class="close-LB-screen"></div>
+        <div class="container">
+           
+            <div class="LB-menu">
+                <img class='lb-close' src="resources/images/close-icon.png" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="img-placeholder">
+                
+            </div>
         
-    </footer>
+       </div>
+        
+    </div>
+   
+    <script src='script.js'></script>
+    
 </body>
 </html>
