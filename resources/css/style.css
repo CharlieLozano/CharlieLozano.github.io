@@ -746,6 +746,8 @@ nav .menu{
     display: flex;
     align-content: center;
     justify-content: center;
+    justify-self: center;
+    justify-items: center;
 }
 
 .lighbox .container{
@@ -753,12 +755,15 @@ nav .menu{
     align-items: center;
     justify-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .img-placeholder img{
     object-fit: scale-down;
     position: relative;
     z-index: 80;
+    max-width: 100%;
+    justify-self: center;
 }
 
 .close-LB-screen{

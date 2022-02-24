@@ -34,19 +34,23 @@ function resizeImage(){
         let windowWidth = window.innerWidth;
         let realHeight = Number(lightboxImage.naturalHeight);
         let realWidth = Number(lightboxImage.naturalWidth);
-
-        console.log(lbImgHeight)
+        
         if(realHeight > windowHeight - 80){
+            
             lightboxImage.style.height = (windowHeight - 80) + 'px';
             lightboxImage.style.width = 'auto'
-
+            imagePlace.style.height = (windowHeight - 80) + 'px';
+            imagePlace.style.height = 'auto'
+            
         }
 
-        let lbImgWidth = Number(getComputedStyle(lightboxImage).width.slice(0, -2));
-        if(realWidth > windowWidth - 80 ){
-            console.log(lbImgHeight)
+        let newWidth = Number(getComputedStyle(lightboxImage).width.slice(0, -2));
+        console.log('This ie new width: ' + newWidth)
+        if(newWidth > windowWidth - 80 ){
             imagePlace.style.width = (windowWidth - 80) + 'px';
-            imagePlace.style.height = 'auto'     
+            imagePlace.style.height = 'auto'
+            lightboxImage.style.width = (windowWidth - 80) + 'px';
+            lightboxImage.style.height = 'auto'
         }
 
     }
